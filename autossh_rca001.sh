@@ -17,9 +17,9 @@
 
 TUNNEL_HOST=b5b2808.online-server.cloud
 TUNNEL_USER=rca001
-TUNNEL_PORT=3340
-MONITOR_PORT=9923
-KEY_PATH=/home/rca001/.ssh/id_rsa
+TUNNEL_PORT=3333
+MONITOR_PORT=0
+KEY_PATH=/home/pi/.ssh/id_rsa
 
 NAME=autossh
 DAEMON=/usr/lib/autossh/autossh
