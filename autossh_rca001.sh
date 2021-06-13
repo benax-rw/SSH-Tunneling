@@ -17,7 +17,8 @@
 
 TUNNEL_HOST=b5b2808.online-server.cloud
 TUNNEL_USER=rca001
-TUNNEL_PORT=3333
+TUNNEL_SSH_PORT=3333
+TUNNEL_HTTP_PORT=8080
 MONITOR_PORT=0
 KEY_PATH=/home/pi/.ssh/id_rsa
 
@@ -25,7 +26,7 @@ NAME=autossh
 DAEMON=/usr/lib/autossh/autossh
 AUTOSSH_ARGS="-M $MONITOR_PORT -f"
 SSH_ARGS="-nNTv -o ServerAliveInterval=60 -o ServerAliveCountMax=3 -o IdentitiesOnly=yes -o StrictHostKeyChecking=no \
-         -i $KEY_PATH -R $TUNNEL_PORT:localhost:22 $TUNNEL_USER@$TUNNEL_HOST"
+         -i $KEY_PATH -R $TUNNEL_SSH_PORT:localhost:22 $TUNNEL_HTTP_PORT:localhost:80 $TUNNEL_USER@$TUNNEL_HOST"
 
 DESC="autossh for reverse ssh"
 SCRIPTNAME=/etc/init.d/$NAME
