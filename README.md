@@ -1,5 +1,5 @@
 How to install the SSH Tunneling
-<b>Download, adapt and install the template script for initiating autossh</b>
+Download, adapt and install the template script for initiating autossh
 git clone https://github.com/benax-rw/SSH-Tunneling
 Note: autossh_rca001.sh has been adapted from the original one that was written by Clément Désiles.
 
